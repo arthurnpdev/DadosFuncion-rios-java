@@ -1,0 +1,27 @@
+public class Dados {
+
+	 private String name;
+	 private Double grossSalary;
+	 private Double impost;
+	 
+	 
+	public Dados(String name, double grossSalary, double impost) {
+		this.name = name;
+		this.grossSalary = grossSalary;
+		this.impost = impost;
+	}
+
+	public double calculateSalary() {
+		return grossSalary - impost;
+	}
+	
+	public void increaseSalary(double percent) {
+		grossSalary += grossSalary * (percent / 100);
+	}
+	
+	public void exibirDados() {
+		System.out.println("Empregado: " + name + " / Salário: " + calculateSalary());
+	}
+	
+		
+	}
