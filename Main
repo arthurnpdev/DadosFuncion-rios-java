@@ -1,0 +1,34 @@
+package Dados;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Informe os dados do funcionário:");
+		System.out.println("Nome: ");
+		String name = scanner.nextLine();
+		
+		System.out.println("Salário bruto: ");
+		Double grossSalary = scanner.nextDouble();
+		
+		System.out.println("Imposto: ");
+		Double impost = scanner.nextDouble();
+		
+		
+		Dados dados = new Dados(name, grossSalary, impost);
+		
+		dados.exibirDados();
+				
+		System.out.println("Qual o percentual de aumento do salário? ");
+		Double percent = scanner.nextDouble();
+		
+		dados.increaseSalary(percent);
+		
+		System.out.println("Dados Atualizados: ");
+		dados.exibirDados();
+		
+		scanner.close();
+		
+		
+			}
+	}
